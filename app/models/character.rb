@@ -10,6 +10,8 @@
 #  movie_id   :integer
 #
 class Character < ApplicationRecord
+  belongs_to(:movie, { class_name: "Movie" })
+
   def movie
     key = self.movie_id
 
